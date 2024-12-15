@@ -46,6 +46,7 @@ async def predict(img):
         else:
             prediction = "No analysis available. Try again later."
 
+        await model.reset()
         yield [prediction, to_html(messages)]
 
     except Exception as e:

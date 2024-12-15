@@ -117,12 +117,11 @@ class Minerva:
         """Reset team state"""
         self.team.reset()
 
-    async def analyze_image(self, image_path: str) -> AsyncIterator:
+    async def analyze(self, image: Image) -> AsyncIterator:
         """
         Analyze an image for potential scams.
         """
-        pil_image = Image.open(image_path)
-        img = AGImage(pil_image)
+        img = AGImage(image)
         mm_message = MultiModalMessage(content=[img], source="User")
 
         return self.team.run_stream(task=mm_message)

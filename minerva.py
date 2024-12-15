@@ -79,8 +79,7 @@ class Minerva:
             name="Content_Analyst",
             description="Analyzes the text for scam patterns",
             system_message=self.config['content_agent']['assignment'],
-            model_client=self.model,
-            tools=[url_checker_tool]
+            model_client=self.model
         ))
 
         agents.append(AssistantAgent(
@@ -113,9 +112,9 @@ class Minerva:
             max_turns=6
         )
     
-    def reset(self):
+    async def reset(self):
         """Reset team state"""
-        self.team.reset()
+        await self.team.reset()
 
     async def analyze(self, image: Image) -> AsyncIterator:
         """

@@ -15,13 +15,12 @@ from tools import Tools
 
 class Minerva:
     """
-    AI Guardian for Scam Protection using multi-agent system for analyzing images
-    to identify scam attempts and provide personalized scam prevention.
+    AI Guardian for Scam Protection using an Agentic Workflow
     """
 
     def __init__(self, config_path: str = "config/agents.yaml"):
         """
-        Initialize Minerva with configuration and setup agents.
+        Initialize Minerva with agents and tools
         """
         self.load_environment()
         self.model = self.initialize_model()
@@ -47,7 +46,7 @@ class Minerva:
         )
 
     def create_agents(self) -> List[AssistantAgent]:
-        """Create all required agents with their specialized roles"""
+        """Create all required agents with their specialized roles and tools"""
         
         ocr_tool = FunctionTool(
             self.tools.ocr,

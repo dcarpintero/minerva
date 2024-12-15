@@ -68,8 +68,6 @@ class Tools:
         if expanded_url != target_url:
             request_body["threatInfo"]["threatEntries"].append({"url": expanded_url})
         
-        print(f"request_body: {request_body}")
-        
         try:
             response = requests.post(safe_endpoint, json=request_body)
             response.raise_for_status()

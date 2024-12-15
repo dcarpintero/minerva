@@ -12,7 +12,7 @@ class Tools:
         load_dotenv(find_dotenv())
 
         self.safebrowsing_key = os.getenv("SAFEBROWSING_API_KEY")
-        self.api_base_url = "https://safebrowsing.googleapis.com/v4"
+        self.base_url = "https://safebrowsing.googleapis.com/v4"
         self.client_id = "minerva"
         self.client_version = "0.1.0"
         self.threat_types = [
@@ -41,15 +41,15 @@ class Tools:
         except requests.exceptions.RequestException as e:
             return url  # Return original URL if expansion fails
     
-    def is_url_safe(self, url: str) -> Tuple[bool, List[Dict[str, str]]]:
+    def is_url_safe(self, target_url: str) -> Tuple[bool, List[Dict[str, str]]]:
         """Check if URL is safe using Google Safe Browsing API
         """
         if not self.safebrowsing_key:
             raise ValueError("SAFEBROWSING_API_KEY is missing.")
         
-        api_endpoint = f"{self.api_base_url}/threatMatches:find?key={self.safebrowsing_key}"
-        expanded_url = self.expand_url(url)
-        
+        safe_endpoint = f"{self.base_url}/threatMatches:find?key={self.safebrowsing_key}"
+        expanded_url = self.expand_url(target_url)
+
         request_body = {
             "client": {
                 "clientId": self.client_id,
@@ -60,14 +60,18 @@ class Tools:
                 "platformTypes": ["ANY_PLATFORM"],
                 "threatEntryTypes": ["URL"],
                 "threatEntries": [
-                    {"url": url},
-                    {"url": expanded_url} if expanded_url != url else {}
+                    {"url": target_url}
                 ]
             }
         }
+
+        if expanded_url != target_url:
+            request_body["threatInfo"]["threatEntries"].append({"url": expanded_url})
+        
+        print(f"request_body: {request_body}")
         
         try:
-            response = requests.post(api_endpoint, json=request_body)
+            response = requests.post(safe_endpoint, json=request_body)
             response.raise_for_status()
 
             result = response.json()
@@ -80,8 +84,7 @@ class Tools:
                 for match in result["matches"]:
                     threats.append({
                         "threat_type": match.get("threatType"),
-                        "platform_type": match.get("platformType"),
-                        "threat_entry_type": match.get("threatEntryType")
+                        "threat_url": match.get("threat", {}).get("url"),
                     })
             
             return False, threats

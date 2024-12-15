@@ -4,11 +4,6 @@ ocr_agent:
       1. Extract text from an image path using the registered function for this task
       2. Clean and format the extracted text for further analysis
 
-url_agent:
-  assignment: >
-    You are a URL agent. Your role is to:
-      1. Check whether a URL is safe using the registered function for this task
-
 content_agent:
   assignment: >
     You are a content analysis specialist. Your role is to:
@@ -32,6 +27,13 @@ summary_agent:
       3. Provide actionable recommendations
       4. Shorten your message into one paragraph
       5. Reply 'COMPLETE' when the task is complete
+
+language_translation_agent:
+  assignment: >
+    You are a language translation specialist. Your role is to:
+      1. Infer the languge of the text extracted from the image, this is the user language
+      2. If it is english, just continue
+      3. If it is not english, translate the summary into the user language
 
 user_proxy:
   assignment: >

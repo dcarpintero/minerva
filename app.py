@@ -7,16 +7,32 @@ from formatter import AutoGenFormatter
 
 title = "Minerva: AI Guardian for Scam Protection"
 description = """
-              Built with AutoGen 0.4.0 and OpenAI. </br> 
-              Analysis might take up to 30s. </br>
-              https://github.com/dcarpintero/minerva
+              Built with AutoGen 0.4.0 and OpenAI. </br></br>
+
+              Minerva analyzes the content of a screenshot for potential scams </br>
+              and provides an analysis in the language of the extracted text</br></br>
+
+              Agents coordinated as an AutoGen Team in a RoundRobin fashion: </br>
+              - *OCR Specialist* </br>
+              - *Link Checker* </br>
+              - *Content Analyst* </br>
+              - *Decision Maker* </br>
+              - *Summary Specialist* </br>
+              - *Language Translation Specialist* </br></br>
+
+              Try out one of the examples to perform a scam analysis. </br>
+              Agentic Workflow is streamed for demonstration purposes. </br></br>
+
+              https://github.com/dcarpintero/minerva </br>
+              Submission for RBI Berkeley, CS294/194-196, LLM Agents (Diego Carpintero) 
               """
 inputs = gr.components.Image()
 outputs = [
     gr.components.Textbox(label="Analysis Result"),
     gr.HTML(label="Agentic Workflow (Streaming)")
 ]
-examples = "samples"
+examples = "examples"
+example_labels = ["EN:Gift:Social", "ES:Banking:Social", "EN:Billing:SMS", "EN:Multifactor:Email", "EN:CustomerService:Twitter"]
 
 model = Minerva()
 formatter = AutoGenFormatter()
@@ -30,16 +46,14 @@ def to_html(texts):
 async def predict(img):
     try:
         img = Image.fromarray(img)
-
         stream = await model.analyze(img)
 
         streams = []
         messages = []
         async for s in stream:
-            msg = await formatter.to_output(s)
             streams.append(s)
-            messages.append(msg)
-            yield ["", to_html(messages)]
+            messages.append(await formatter.to_output(s))
+            yield ["Pondering, stand by...", to_html(messages)]
         
         if streams[-1]:
             prediction = streams[-1].messages[-1].content
@@ -56,12 +70,14 @@ async def predict(img):
 
 with gr.Blocks() as demo:
     with gr.Tab("Minerva: AI Guardian for Scam Protection"):
-        gr.Interface(
-            fn=predict,
-            inputs=inputs,
-            outputs=outputs,
-            examples=examples,
-            description=description,
-        ).queue(default_concurrency_limit=5)
+        with gr.Row():
+            gr.Interface(
+                fn=predict,
+                inputs=inputs,
+                outputs=outputs,
+                examples=examples,
+                example_labels=example_labels,
+                description=description,
+            ).queue(default_concurrency_limit=5)
 
 demo.launch()

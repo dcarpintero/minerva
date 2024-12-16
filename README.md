@@ -30,11 +30,24 @@ We define the following agents whose roles are specified in [./config/agents.yam
 
 ### Orchestration
 
-We orchestrate the agents to cooperate in RoundRobin fashion. The termination is triggered after all agents have completed their tasks, or if no text can be extracted from the image provided.
+In [./agents.py](./agents.py) we create the agents and define the following workflow:
+- cooperation as a team in RoundRobin fashion
+- the user triggers the process with a MultiModal message (image)
+- the termination is enabled all agents have completed their tasks, or if no text can be extracted by the OCR specialist in the image provided.
 
 ### App
 
-The results and workflow can be tested at https://huggingface.co/spaces/dcarpintero/minerva
+This scam prediction process can be tested at https://huggingface.co/spaces/dcarpintero/minerva
+
+### Streaming Workflow
+
+To visualize the flow of messages among the agents we define a formatter in [./formatter.py](./formatter.py) that is integrated into the App.
+
+### Analysis with Multi-Lingual Messages
+
+<p align="center">
+  <img src="./results/minerva.results.panel.png">
+</p>
 
 ### References
 

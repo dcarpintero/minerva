@@ -1,4 +1,4 @@
-from typing import AsyncGenerator, List, TypeVar
+from typing import List
 
 from autogen_agentchat.base import Response, TaskResult
 from autogen_agentchat.messages import AgentMessage, MultiModalMessage

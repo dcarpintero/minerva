@@ -15,7 +15,9 @@ pinned: false
 
 Digital scams inflict devastating impacts in our society. Over the past five years, $37.4 billion was lost in the United States alone due to online fraud [1]. Beyond these direct losses, the hidden costs of processing nearly 4 million fraud claims [1] has overwhelmed institutional and enterprise resources, while victims face psychological disruptions and eroding trust in novel technologies.
 
-To address this challenge, we explore the use of a multi-agent system leveraging Large Language Models (LLMs) to protect users from digital scams. MINERVA implements a cooperative team of specialized agents using the AutoGen framework (v0.4.0) [2], where each agent focuses on a specific aspect of scam detection - from optical character recognition and URL verification to content analysis and multilingual processing. These agents work in concert to provide clear, actionable guidance to users.
+To address this challenge, we explore the use of a multi-agent system leveraging Large Language Models (LLMs) to protect users from digital scams. MINERVA implements a cooperative team of specialized agents using the AutoGen framework (v0.4.0) [2], where each agent leverages tool calling and LLM capabilities to focus on a specific aspect of scam detection - from optical character recognition and URL verification to content analysis and multilingual processing. The workflow is trigerred by a user sending a MultiModal message (screenshot of a digital communication) to the AI team, and terminates after all agents have completed their tasks or a termination message is trigerred. After this analysis the user receives clear, actionable guidance in their own language.
+
+Beyond immediate protection, this project improves digital literacy by providing users with explanations about detected scams, while building trust in AI-powered safety tools. Moreover, by creating an open, anonymized, up-to-date scam database with the reported scams, it will facilitate fine-tuning using up-to-date scam patterns.
 
 ### Agents with Tools
 
@@ -37,7 +39,7 @@ In [./agents.py](./agents.py) we create the agents and define the following work
 
 ### App
 
-This scam prediction process can be tested at https://huggingface.co/spaces/dcarpintero/minerva
+This scam prediction process can be easily tested at https://huggingface.co/spaces/dcarpintero/minerva
 
 ### Streaming Workflow
 

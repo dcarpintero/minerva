@@ -5,26 +5,25 @@ from minerva import Minerva
 from formatter import AutoGenFormatter
 
 
-title = "Minerva: AI Guardian for Scam Protection"
+title = "Minerva: LLM Agents for Scam Protection"
 description = """
-              Built with AutoGen 0.4.0 and OpenAI. </br></br>
+              🦉 Minerva uses LLM Agents to analyze screenshots for potential scams. </br>
+              📢 It provides the analysis in the language of the extracted text.</br></br>
 
-              Minerva analyzes the content of a screenshot for potential scams </br>
-              and provides an analysis in the language of the extracted text</br></br>
+              📄 <b>Try out one of the examples to perform a scam analysis. </b></br>
+              ⚙️ The Agentic Workflow is streamed for demonstration purposes. </br></br>
 
-              Agents coordinated as an AutoGen Team in a RoundRobin fashion: </br>
-              - *OCR Specialist* </br>
-              - *Link Checker* </br>
-              - *Content Analyst* </br>
-              - *Decision Maker* </br>
-              - *Summary Specialist* </br>
-              - *Language Translation Specialist* </br></br>
+              🕵 LLM Agents coordinated as an AutoGen Team in a RoundRobin fashion: </br>
+                - *OCR Specialist* </br>
+                - *Link Checker* </br>
+                - *Content Analyst* </br>
+                - *Decision Maker* </br>
+                - *Summary Specialist* </br>
+                - *Language Translation Specialist* </br></br>
 
-              Try out one of the examples to perform a scam analysis. </br>
-              Agentic Workflow is streamed for demonstration purposes. </br></br>
-
-              https://github.com/dcarpintero/minerva </br>
-              Submission for RBI Berkeley, CS294/194-196, LLM Agents (Diego Carpintero) 
+              🧑‍💻️ https://github.com/dcarpintero/minerva </br>
+              🎓 Submission for RBI Berkeley, CS294/194-196, LLM Agents (Diego Carpintero)</br></br>
+              ♥️ Built with AutoGen 0.4.0 and OpenAI.  
               """
 inputs = gr.components.Image()
 outputs = [
@@ -32,7 +31,7 @@ outputs = [
     gr.HTML(label="Agentic Workflow (Streaming)")
 ]
 examples = "examples"
-example_labels = ["EN:Gift:Social", "ES:Banking:Social", "EN:Billing:SMS", "EN:Multifactor:Email", "EN:CustomerService:Twitter"]
+example_labels = ["EN:Gift:Social", "ES:Banking:Social", "EN:Billing:SMS", "EN:Multifactor:Email", "EN:CustomerService:Twitter", "00:Landscape.HAM"]
 
 model = Minerva()
 formatter = AutoGenFormatter()

@@ -1,0 +1,7 @@
+autogen-agentchat==0.4.0.dev11
+autogen-ext[openai]==0.4.0.dev11
+pillow==11.0.0
+pyyaml==6.0.2
+pytesseract==0.3.13
+python-dotenv==1.0.1
+#gradio==5.9.0 # huggingface spaces handles gradio version

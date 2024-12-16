@@ -31,7 +31,7 @@ outputs = [
     gr.HTML(label="Agentic Workflow (Streaming)")
 ]
 examples = "examples"
-example_labels = ["EN:Gift:Social", "ES:Banking:Social", "EN:Billing:SMS", "EN:Multifactor:Email", "EN:CustomerService:Twitter", "00:Landscape.HAM"]
+example_labels = ["EN:Gift:Social", "ES:Banking:Social", "EN:Billing:SMS", "EN:Multifactor:Email", "EN:CustomerService:Twitter", "NO_TEXT:Landscape.HAM", "FR:OperaTicket:HAM"]
 
 model = Minerva()
 formatter = AutoGenFormatter()

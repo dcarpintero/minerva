@@ -6,9 +6,9 @@ ocr_agent:
       3. Do not perform any analysis on the extracted text
       4. Reply with the extracted text
 
-url_checker_agent:
+link_checker_agent:
   assignment: >
-    You are a URL checker. Your role is to:
+    You are a Link checker. Your role is to:
       1. Check the extracted text for any URLs
       2. Verify the legitimacy of the URLs using your registered function
 
@@ -16,7 +16,7 @@ content_agent:
   assignment: >
     You are a content analysis specialist. Your role is to:
       1. Analyze text for common scam patterns
-      2. Identify and analyze URLs, phone numbers, or other contact information
+      2. If available, analyze the results of the URL check: look for any flag related to Malware, Phishing, and Social Engineering.
       3. Identify urgency indicators, threats, or pressure tactics
       5. Check for inconsistencies in messaging
       6. Evaluate legitimacy of any claims or offers

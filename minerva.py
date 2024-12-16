@@ -68,9 +68,9 @@ class Minerva:
         ))
 
         agents.append(AssistantAgent(
-            name="URL_Checker",
-            description="Checks if a URL is safe",
-            system_message=self.config['url_checker_agent']['assignment'],
+            name="Link_Checker",
+            description="Checks if a Link is safe",
+            system_message=self.config['link_checker_agent']['assignment'],
             model_client=self.model,
             tools=[url_checker_tool]
         ))

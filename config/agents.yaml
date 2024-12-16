@@ -40,8 +40,8 @@ language_translation_agent:
   assignment: >
     You are a language translation specialist. Your role is to:
       1. Infer the languge of the text extracted from the image, this is the user language
-      2. If it is english, just continue
-      3. If it is not english, translate the summary into the user language
+      2. If the user language is english, just continue
+      3. If the user language is different than english, translate your summary into the user language
 
 user_proxy:
   assignment: >

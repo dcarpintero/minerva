@@ -15,4 +15,4 @@ jobs:
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push https://dcarpintero:$HF_TOKEN@huggingface.co/spaces/dcarpintero/minerva main
+        run: git push git@hf.co:spaces/dcarpintero/minerva main

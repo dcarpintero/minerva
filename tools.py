@@ -41,7 +41,7 @@ class Tools:
         except requests.exceptions.RequestException as e:
             return url  # Return original URL if expansion fails
     
-    def is_url_safe(self, target_url: str) -> Tuple[bool, List[Dict[str, str]]]:
+    def is_url_safe(self, target_url: str) -> Tuple[str, List[Dict[str, str]]]:
         """Check if URL is safe using Google Safe Browsing API
         """
         if not self.safebrowsing_key:
@@ -75,7 +75,7 @@ class Tools:
             result = response.json()
             
             if not result:
-                return True, []
+                return "Not Flagged", []
             
             threats = []
             if "matches" in result:
@@ -85,7 +85,7 @@ class Tools:
                         "threat_url": match.get("threat", {}).get("url"),
                     })
             
-            return False, threats
+            return "Flagged", threats
             
         except requests.exceptions.RequestException as e:
             raise Exception(f"Error checking URL safety: {str(e)}")

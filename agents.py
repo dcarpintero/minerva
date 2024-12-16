@@ -15,9 +15,9 @@ import yaml
 
 from tools import Tools
 
-class Minerva:
+class MinervaTeam:
     """
-    AI Guardian for Scam Protection using an Agentic Workflow
+    Minerva Team tasked with Scam Protection using an Agentic Workflow
     """
 
     def __init__(self, config_path: str = "config/agents.yaml"):

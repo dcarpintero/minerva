@@ -1,7 +1,7 @@
 from PIL import Image
 import gradio as gr
 
-from minerva import Minerva
+from agents import MinervaTeam
 from formatter import AutoGenFormatter
 
 
@@ -33,7 +33,7 @@ outputs = [
 examples = "examples"
 example_labels = ["EN:Gift:Social", "ES:Banking:Social", "EN:Billing:SMS", "EN:Multifactor:Email", "EN:CustomerService:Twitter", "NO_TEXT:Landscape.HAM", "FR:OperaTicket:HAM"]
 
-model = Minerva()
+agents = MinervaTeam()
 formatter = AutoGenFormatter()
 
 def to_html(texts):
@@ -45,7 +45,7 @@ def to_html(texts):
 async def predict(img):
     try:
         img = Image.fromarray(img)
-        stream = await model.analyze(img)
+        stream = await agents.analyze(img)
 
         streams = []
         messages = []
@@ -59,7 +59,7 @@ async def predict(img):
         else:
             prediction = "No analysis available. Try again later."
 
-        await model.reset()
+        await agents.reset()
         yield [prediction, to_html(messages)]
 
     except Exception as e:

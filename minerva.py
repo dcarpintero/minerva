@@ -2,11 +2,13 @@ from typing import List, AsyncIterator
 import os
 
 from autogen_agentchat.agents import AssistantAgent
+from autogen_agentchat.conditions import TextMentionTermination
 from autogen_agentchat.messages import MultiModalMessage
 from autogen_agentchat.teams import RoundRobinGroupChat
 from autogen_core import Image as AGImage
 from autogen_core.tools import FunctionTool
 from autogen_ext.models.openai import OpenAIChatCompletionClient
+
 from dotenv import load_dotenv, find_dotenv
 from PIL import Image
 import yaml
@@ -107,9 +109,12 @@ class Minerva:
     
     def create_team(self) -> RoundRobinGroupChat:
         """Create a team of agents that work together in Round Robin fashion"""
+        termination = TextMentionTermination("NO_TEXT_FOUND")
+
         return RoundRobinGroupChat(
             self.agents,
-            max_turns=6
+            max_turns=6,
+            termination_condition=termination
         )
     
     async def reset(self):

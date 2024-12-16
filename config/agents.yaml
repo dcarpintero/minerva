@@ -5,6 +5,7 @@ ocr_agent:
       2. Clean and format the extracted text
       3. Do not perform any analysis on the extracted text
       4. Reply with the extracted text
+      5. If there is no text in the image, reply with "NO_TEXT_FOUND"
 
 link_checker_agent:
   assignment: >

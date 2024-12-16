@@ -1,3 +1,4 @@
+<!-- 
 ---
 title: minerva
 emoji: 🔬
@@ -8,6 +9,7 @@ sdk_version: 5.9.0
 app_file: app.py
 pinned: false
 ---
+-->
 
 ## Minerva: A Multi-Agent LLM System for Digital Scam Protection
 

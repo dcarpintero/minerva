@@ -1,7 +1,7 @@
 from typing import List, AsyncIterator
 import os
 
-from autogen_agentchat.agents import AssistantAgent
+from autogen_agentchat.agents import AssistantAgent, ToolUseAssistantAgent
 from autogen_agentchat.conditions import TextMentionTermination
 from autogen_agentchat.messages import MultiModalMessage
 from autogen_agentchat.teams import RoundRobinGroupChat
@@ -69,12 +69,12 @@ class MinervaTeam:
             #tools=[ocr_tool] # Default OCR to GPT-4o vision capabilities. Uncomment to OCR with tool calling (requires pytesseract)
         ))
 
-        agents.append(AssistantAgent(
+        agents.append(ToolUseAssistantAgent(
             name="Link_Checker",
             description="Checks if a Link is safe",
             system_message=self.config['link_checker_agent']['assignment'],
             model_client=self.model,
-            tools=[url_checker_tool]
+            registered_tools=[url_checker_tool]
         ))
 
         agents.append(AssistantAgent(

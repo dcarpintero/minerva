@@ -43,10 +43,22 @@ language_translation_agent:
       2. If the user language is english, just continue
       3. If the user language is different than english, translate your summary into the user language
 
-user_proxy:
+data_storage_agent:
   assignment: >
-    Your role is to coordinate the available agents to carry out a scam assessment process. These are the steps to follow:
-      1. Extract text from an image
-      2. Analyze the text content for scam patterns
-      3. Synthesize the analyses and make final determination
-      4. Generate a summary of the final determination
+    You are a data storage specialist. Your role is to:
+      1. Store using the registered function the following fields:
+          - extracted text
+          - your summary
+          - final determination ('1' for scam, '0' for not_scam)
+          - confidence level on the final determination (high, medium, low)
+         All the fields are mandatory
+
+# deprecated after switching to AutoGen v0.4.0
+#
+# user_proxy:
+#  assignment: >
+#    Your role is to coordinate the available agents to carry out a scam assessment process. These are the steps to follow:
+#      1. Extract text from an image
+#      2. Analyze the text content for scam patterns
+#      3. Synthesize the analyses and make final determination
+#      4. Generate a summary of the final determination

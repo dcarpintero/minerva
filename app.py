@@ -55,7 +55,7 @@ async def predict(img):
             yield ["Pondering, stand by...", to_html(messages)]
         
         if streams[-1]:
-            prediction = streams[-1].messages[-1].content
+            prediction = streams[-1].messages[-4].content
         else:
             prediction = "No analysis available. Try again later."
 

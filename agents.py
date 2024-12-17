@@ -13,8 +13,7 @@ from dotenv import load_dotenv, find_dotenv
 from PIL import Image
 import yaml
 
-from tools import ImageOCR
-from tools import URLChecker
+from tools import ImageOCR, URLChecker, DatabaseConnector
 
 class MinervaTeam:
     """
@@ -60,6 +59,12 @@ class MinervaTeam:
         url_checker_tool = FunctionTool(
             url_checker.is_url_safe,
             description="Checks if a URL is safe"
+        )
+
+        db_connector = DatabaseConnector()
+        db_connector_tool = FunctionTool(
+            db_connector.store_result,
+            description="Stores analysis results in a database"
         )
 
         agents = []
@@ -108,6 +113,14 @@ class MinervaTeam:
             model_client=self.model
         ))
 
+        agents.append(ToolUseAssistantAgent(
+            name="DataStorage_Agent",
+            description="Store the extracted text, summary, determination (1, 0) and confidence level (high, medium low) in a database",
+            system_message=self.config['data_storage_agent']['assignment'],
+            model_client=self.model,
+            registered_tools=[db_connector_tool]
+        ))
+
         return agents
     
     def create_team(self) -> RoundRobinGroupChat:
@@ -116,7 +129,7 @@ class MinervaTeam:
 
         return RoundRobinGroupChat(
             self.agents,
-            max_turns=6,
+            max_turns=7,
             termination_condition=termination
         )
     

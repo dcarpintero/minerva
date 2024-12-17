@@ -11,13 +11,29 @@ pinned: false
 ---
 -->
 
-## Minerva: A Multi-Agent LLM System for Digital Scam Protection
+## MINERVA: A Multi-Agent LLM System for Digital Scam Protection
 
-Digital scams inflict devastating impacts in our society. Over the past five years, $37.4 billion was lost in the United States alone due to online fraud [1]. Beyond these direct losses, the hidden costs of processing nearly 4 million fraud claims [1] has overwhelmed institutional and enterprise resources, while victims face psychological disruptions and eroding trust in novel technologies.
+Digital scams inflict devastating impacts in our society. According to the FBI IC3, $37.4 billion was lost in the United States alone over the past five years due to Internet scams [1]. Beyond these direct losses, the hidden costs of processing nearly 4 million associated complaints [1] has overwhelmed institutional and enterprise resources, while victims face psychological disruptions and eroding trust in novel technologies.
 
-To address this challenge, we explore the use of a multi-agent system leveraging Large Language Models (LLMs) to protect users from digital scams. MINERVA implements a cooperative team of specialized agents using the AutoGen framework (v0.4.0) [2], where each agent leverages tool calling and LLM capabilities to focus on a specific aspect of scam detection - from optical character recognition and URL verification to content analysis and multilingual processing. The workflow is trigerred by a user sending a MultiModal message (screenshot of a digital communication) to the AI team, and terminates after all agents have completed their tasks or a termination message is trigerred. After this analysis the user receives clear, actionable guidance in their own language.
+To address this challenge, we explore the use of a multi-agent system based on a Large Language Model (GPT-4o) to protect users from digital scams. MINERVA implements a cooperative team of six specialized agents using the AutoGen framework (v0.4.0) [2], where each agent can compose advanced model capabilities and tool utilization to focus on a specific aspect of scam detection - from optical character recognition and link verification to content analysis, decision making, summarization, and linguistic translation. The workflow is initiated by a user sending a multimodal message to the group manager. It ends when all agents complete a round-robin conversation cycle or when an agent triggers a termination signal. Following this autonomous workflow, the user receives clear, actionable guidance in their own language.
 
-Beyond immediate protection, this project improves digital literacy by providing users with explanations about detected scams, while building trust in AI-powered safety tools. Moreover, by creating an open, anonymized, up-to-date scam database with the reported scams, it will facilitate fine-tuning using up-to-date scam patterns.
+Beyond immediate protection, this project aims to improve digital literacy by providing users with detailed explanations of detected scams, fostering trust in AI-powered safety tools. Additionally, the intended creation of an open, anonymized dataset of reported scams will: (i) enable fine-tuning of future models with current scam patterns, and (ii) provide insights for law enforcement and cybersecurity professionals to understand emerging threats and attack vectors.
+
+*[This work was developed as a project submission for RDI Berkeley, LLM-Agents Course, CS294/194-196. By Diego Carpintero]*
+
+<p align="center">
+  <img src="./static/minerva.architecture.png">
+</p>
+<p align="center">Minerva Agents Architecture</p>
+
+
+### Introduction
+
+We define an Agent as a system that leverages a language model to interpret natural language instructions, perform tasks, interact with its environment and coopearate with other agents (and a human) towards planning and reaching out a goal.
+
+Recent advancements in Large Language Models have enabled the development of sophisticated agents capable of reasoning and tool usage, with multi-agent collaboration emerging as a promising paradigm for complex tasks.
+
+Our intuition is that scam detection represents a valid use case for such multi-agent systems due to its inherent complexity and the need for diverse analytical perspectives. Digital scams often combine multiple deceptive elements - from social engineering tactics to technical manipulation - requiring different types of analysis. A multi-agent approach enables a group of specialized agents to focus on distinct aspects while collaborating through structured dialogue to form a comprehensive assessment.
 
 ### Agents with Tools
 
@@ -54,4 +70,4 @@ To visualize the flow of messages among the agents we define a formatter in [./f
 ### References
 
 - [1] [FBI's Internet Crime Complaint Center (IC3), 2023 Internet Crime Report](https://www.ic3.gov/AnnualReport/Reports/2023_IC3Report.pdf)
-- [2] [AutoGen](https://github.com/microsoft/autogen/)
+- [2] [AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation](https://arxiv.org/abs/2308.08155)

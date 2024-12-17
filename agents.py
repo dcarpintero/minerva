@@ -13,7 +13,8 @@ from dotenv import load_dotenv, find_dotenv
 from PIL import Image
 import yaml
 
-from tools import Tools
+from tools import ImageOCR
+from tools import URLChecker
 
 class MinervaTeam:
     """
@@ -27,7 +28,6 @@ class MinervaTeam:
         self.load_environment()
         self.model = self.initialize_model()
         self.config = self.load_config(config_path)
-        self.tools = Tools()
         self.agents = self.create_agents()
         self.team = self.create_team()
 
@@ -50,12 +50,15 @@ class MinervaTeam:
     def create_agents(self) -> List[AssistantAgent]:
         """Create all required agents with their specialized roles and tools"""
         
+        ocr = ImageOCR()
         ocr_tool = FunctionTool(
-            self.tools.ocr,
+            ocr.extract_text,
             description="Extracts text from an image path"
         )
+
+        url_checker = URLChecker()
         url_checker_tool = FunctionTool(
-            self.tools.is_url_safe,
+            url_checker.is_url_safe,
             description="Checks if a URL is safe"
         )
 

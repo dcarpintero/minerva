@@ -2,7 +2,7 @@ from PIL import Image
 import gradio as gr
 
 from agents import MinervaTeam
-from formatter import AutoGenFormatter
+from tools.formatter import AutoGenFormatter
 
 
 title = "Minerva: LLM Agents for Scam Protection"

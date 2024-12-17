@@ -1,52 +1,42 @@
 import os
 from typing import Dict, List, Tuple
-
-from PIL import Image
-import pytesseract
 import requests
 from dotenv import load_dotenv, find_dotenv
 
+class URLChecker:
+    """A class to handle URL safety checks."""
 
-class Tools:
+    # Standard threat types for Google Safe Browsing API
+    THREAT_TYPES = [
+        "MALWARE",
+        "SOCIAL_ENGINEERING",
+        "UNWANTED_SOFTWARE",
+        "POTENTIALLY_HARMFUL_APPLICATION"
+    ]
+
     def __init__(self):
         load_dotenv(find_dotenv())
-
+        
         self.safebrowsing_key = os.getenv("SAFEBROWSING_API_KEY")
+        if not self.safebrowsing_key:
+            raise ValueError("SAFEBROWSING_API_KEY is missing in environment variables.")
+            
         self.base_url = "https://safebrowsing.googleapis.com/v4"
         self.client_id = "minerva"
         self.client_version = "0.1.0"
-        self.threat_types = [
-            "MALWARE",
-            "SOCIAL_ENGINEERING",
-            "UNWANTED_SOFTWARE",
-            "POTENTIALLY_HARMFUL_APPLICATION"
-        ]
-
-    def ocr(self, image_path: str) -> str:
-        """Extract text from image using OCR
-        """
-        try:
-            image = Image.open(image_path)
-            text = pytesseract.image_to_string(image)
-            return text
-        except Exception as e:
-            return f"Error in text extraction: {str(e)}"
 
     def expand_url(self, url: str) -> str:
-        """Expand shortened URL
+        """Expand shortened URL.
         """
         try:
             response = requests.head(url, allow_redirects=True)
             return response.url
-        except requests.exceptions.RequestException as e:
-            return url  # Return original URL if expansion fails
-    
+        except requests.exceptions.RequestException:
+            return url # Return original URL if expansion fails
+
     def is_url_safe(self, target_url: str) -> Tuple[str, List[Dict[str, str]]]:
-        """Check if URL is safe using Google Safe Browsing API
+        """Check if URL is safe using Google Safe Browsing API.
         """
-        if not self.safebrowsing_key:
-            raise ValueError("SAFEBROWSING_API_KEY is missing.")
-        
         safe_endpoint = f"{self.base_url}/threatMatches:find?key={self.safebrowsing_key}"
         expanded_url = self.expand_url(target_url)
 
@@ -56,12 +46,10 @@ class Tools:
                 "clientVersion": self.client_version
             },
             "threatInfo": {
-                "threatTypes": self.threat_types,
+                "threatTypes": self.THREAT_TYPES,
                 "platformTypes": ["ANY_PLATFORM"],
                 "threatEntryTypes": ["URL"],
-                "threatEntries": [
-                    {"url": target_url}
-                ]
+                "threatEntries": [{"url": target_url}]
             }
         }
 
@@ -71,7 +59,7 @@ class Tools:
         try:
             response = requests.post(safe_endpoint, json=request_body)
             response.raise_for_status()
-
+            
             result = response.json()
             
             if not result:

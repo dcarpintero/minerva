@@ -1,4 +1,6 @@
+import pandas as pd
 import sqlite3
+
 from typing import Optional
 from datetime import datetime
 
@@ -19,7 +21,7 @@ class DatabaseConnector:
             text TEXT NOT NULL,
             summary TEXT,
             is_scam BOOLEAN NOT NULL,
-            confidence_level TEXT,
+            confidence_level INTEGER,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )
         """
@@ -31,7 +33,7 @@ class DatabaseConnector:
         text: str,
         summary: Optional[str],
         is_scam: bool,
-        confidence_level: Optional[str]
+        confidence_level: int
     ) -> int:
         """Store analysis result in the database.
         """
@@ -39,13 +41,6 @@ class DatabaseConnector:
         INSERT INTO results (text, summary, is_scam, confidence_level)
         VALUES (?, ?, ?, ?)
         """
-
-        print("Storing result in database...")
-        # print fields
-        print(f"Text: {text}")
-        print(f"Summary: {summary}")
-        print(f"Is Scam: {is_scam}")
-        print(f"Confidence Level: {confidence_level}")
 
         with sqlite3.connect(self.db_path) as conn:
             cursor = conn.execute(
@@ -67,11 +62,11 @@ class DatabaseConnector:
                 return dict(result)
             return None
 
-    def get_top_k(self, k: int = 10) -> list[dict]:
-        """Retrieve most recent analysis results.
+    def get_top_k(self, k: int = 10) -> pd.DataFrame:
+        """Retrieve most recent analysis results as a DataFrame.
         """
         query = "SELECT * FROM results ORDER BY created_at DESC LIMIT ?"
         with sqlite3.connect(self.db_path) as conn:
-            conn.row_factory = sqlite3.Row
-            cursor = conn.execute(query, (k,))
-            return [dict(row) for row in cursor.fetchall()]
+            df = pd.read_sql_query(query, conn, params=(k,))
+            return df
+                

@@ -27,6 +27,7 @@ decision_agent:
     You are the final decision maker. Your role is to:
       1. Make a final determination on scam probability
       2. Provide detailed explanation of the decision
+      3. Provide a confidence level about your final determination in a scale from 1-5, where 5 is highly confident
 
 summary_agent:
   assignment: >
@@ -50,7 +51,7 @@ data_storage_agent:
           - extracted text
           - your summary
           - final determination ('1' for scam, '0' for not_scam)
-          - confidence level on the final determination as a scale from 1-5, where 5 is highly confident
+          - confidence level on the final determination in a scale from 1-5, where 5 is highly confident
          All the fields are mandatory
 
 # deprecated after switching to AutoGen v0.4.0

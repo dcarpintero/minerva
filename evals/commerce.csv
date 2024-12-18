@@ -1,0 +1,31 @@
+message,is_scam,category,subcategory
+"Your Amazon order #8829 has been shipped! Track your package: hxxp://amaz0n-tracking.net. Click now to avoid delivery issues.",1,commerce,shopping
+"URGENT: Problem with your recent Amazon order. Verify your payment details at hxxp://amazon-secure-verify.com to avoid cancellation.",1,commerce,shopping
+"Amazon: Your order #112-7366944-3891234 has shipped and will arrive by 8pm today. Track your delivery at amazon.com/orders or via the Amazon app. Questions? Contact Amazon Customer Service.",0,commerce,shopping
+"Your Walmart order has been canceled due to payment issues. To restore order, update payment info: hxxp://walmart-secure.shop/restore",1,commerce,shopping
+"SHIPPING ALERT: Package delivery attempted. Final notice - click hxxp://delivery-status-verify.net to reschedule or package returns tomorrow.",1,commerce,shopping
+"FedEx: Your package from Best Buy will arrive on Dec 20 between 2-6 PM. Track at fedex.com with tracking number: 7891234567. Need to reschedule? Sign in to fedex.com/delivery-manager.",0,commerce,shopping
+"REFUND NOTICE: Your recent purchase refund of $89.99 is pending. Click hxxp://refund-secure.xyz and enter your card details to claim.",1,commerce,shopping
+"Your refund request was approved! To receive $143.50, send your bank details to refunds@shopping-returns.net",1,commerce,shopping
+"Target: Your refund of $67.89 for order #TGT-456789 has been processed to your original payment method. Refund will appear in 3-5 business days. View details at target.com/orders.",0,commerce,shopping
+"iPhone 14 Pro: 90% OFF! Only $199 today. Limited stock. Buy now: hxxp://cheap-phones-sale.net. Pay with Bitcoin for extra discount!",1,commerce,shopping
+"AUTHENTIC Ray-Ban sunglasses 85% OFF! Must sell today. Contact WhatsApp: +1-234-SCAM for exclusive deals.",1,commerce,shopping
+"Nike.com: Holiday Sale - Up to 50% off select styles. Shop now at nike.com/holiday-deals. Free shipping for Nike Members. Returns always free within 60 days.",0,commerce,shopping
+"URGENT: Your eBay account needs verification. Suspicious activity detected. Verify at hxxp://ebay-secure-verify.net to avoid suspension.",1,commerce,marketplace
+"Hi, I'm interested in your item. I'll pay extra $100 if you accept. Send your PayPal to buyer.88751@mail.net for immediate payment.",1,commerce,marketplace
+"eBay: New message about 'Vintage Camera' from buyer_john. View and respond securely at ebay.com/messages. Remember: Always complete transactions on eBay for purchase protection.",0,commerce,marketplace
+"Your Airbnb booking payment failed. Update payment within 2hrs: hxxp://airbnb-payments.site or lose reservation.",1,commerce,marketplace
+"SPECIAL OFFER: Luxury apartment, 80% below market rate. Send security deposit via Western Union to secure. Contact +44-SCAM-NUMBER.",1,commerce,marketplace
+"Airbnb: Booking confirmed for 'Mountain View Cottage'. Check-in Dec 24, 3PM. Access all details at airbnb.com/trips. Questions? Message your host through the Airbnb app.",0,commerce,marketplace
+"TICKET ALERT: Concert tickets 50% off! Limited time offer. Pay through hxxp://ticket-secure-pay.net using bank transfer.",1,commerce,marketplace
+"2 VIP concert tickets for sale! Transfer money to my personal account for immediate delivery. WhatsApp +1-SCAM for details.",1,commerce,marketplace
+"Ticketmaster: Your order for 'Taylor Swift | The Eras Tour' is confirmed. Access tickets at ticketmaster.com/mybehavior or via the Ticketmaster app. Beware of resale scams - only buy from verified sources.",0,commerce,marketplace
+"URGENT INVOICE: Your company owes $2,487 for web services. Pay within 24hrs to avoid legal action: hxxp://invoice-pay-secure.net",1,commerce,business_operations
+"Please update your vendor payment information immediately. New account details: SWIFT: SCAM123. Reply with confirmation.",1,commerce,business_operations
+"Adobe: Your invoice #AD-456789 for Creative Cloud Business ($52.99) is now available. View and pay securely at adobe.com/account. Due date: Jan 1, 2024. Questions? Contact Adobe Business Support.",0,commerce,business_operations
+"FINAL NOTICE: Your business listing will be removed. Pay $299 today: hxxp://business-listing-renew.com to maintain visibility.",1,commerce,business_operations
+"Your Yellow Pages listing expires in 24hrs! Send $399 via Bitcoin to fast-track renewal. Contact admin@yp-renewal.net",1,commerce,business_operations
+"Google Business Profile: Your business verification is complete for 'Main Street Cafe'. Manage your listing at business.google.com. Need help? Visit support.google.com/business.",0,commerce,business_operations
+"Office supplies order confirmed: $1,899. Must pay today. New supplier special offer. Bank details: hxxp://supply-order.net",1,commerce,business_operations
+"ATTENTION: Your toner cartridge order ($799) will be auto-billed. To cancel, send company details to orders@supply-scam.com",1,commerce,business_operations
+"Staples Business Advantage: Your supply order #STP-789012 totaling $234.56 will ship on Dec 19. View order details and track shipment at staplesadvantage.com. Questions? Call 1-800-3STAPLE.",0,commerce,business_operations

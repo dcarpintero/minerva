@@ -1,0 +1,28 @@
+message,is_scam,category,subcategory
+"WARNING: Virus detected on your Windows PC! Call our Microsoft support team immediately at 1-888-SCAM to prevent data loss. $299 for immediate fix.",1,customer_service,technical_support
+"Your computer has been locked! Multiple viruses found. Call Apple Security Team +1-SCAM-NUMBER now or risk permanent damage.",1,customer_service,technical_support
+"Microsoft Security Alert: To check if your device is affected by recent malware attacks, run Windows Security scan: Start > Settings > Windows Security. Never share remote access unless you initiated contact. Questions? Visit microsoft.com/security.",0,customer_service,technical_support
+"ALERT: Your antivirus subscription expires in 2 hours! Renew now at hxxp://norton-security-renewal.net to prevent infection.",1,customer_service,technical_support
+"Your system is infected with 13 viruses! Download our security tool from hxxp://antivirus-protect.xyz. Credit card required.",1,customer_service,technical_support
+"Norton: Your security subscription will renew automatically on Jan 15, 2024 ($84.99). Manage your subscription at norton.com/mynorton. Questions? Call 1-855-815-2726.",0,customer_service,technical_support
+"Your cloud storage is 99% full! Urgent action required: Click hxxp://cloud-storage-verify.net to prevent data loss.",1,customer_service,technical_support
+"CRITICAL: Google Drive storage breach detected. Verify account at hxxp://gdrive-secure.com to protect files.",1,customer_service,technical_support
+"Google Drive: You're using 14.8GB of 15GB storage (98%). Upgrade your storage at drive.google.com/storage or manage your files at drive.google.com. Learn more about storage options at support.google.com.",0,customer_service,technical_support
+"LEGAL NOTICE: Your case requires immediate attention. Pay $500 retainer fee via Bitcoin to hxxp://legal-services.net for representation.",1,customer_service,professional_services
+"Urgent Legal Matter: Settlement pending in your favor. Send $299 processing fee to claim. Contact legal@settlement-claim.net",1,customer_service,professional_services
+"Smith & Associates Law Firm: Your consultation is confirmed for Dec 20, 2:00 PM at our downtown office. Free 30-minute initial consultation. Directions and parking info at smithlaw.com/contact. Questions? Call 555-0123.",0,customer_service,professional_services
+"INSURANCE ALERT: Your policy will be canceled! Update payment info at hxxp://insurance-verify.net within 6 hours.",1,customer_service,professional_services
+"Final Notice: Your health insurance claim needs verification. Send medical history to claims@health-verify.net immediately.",1,customer_service,professional_services
+"State Farm: Your auto insurance payment of $143.50 is due Dec 25. Pay securely at statefarm.com or through our mobile app. Questions about your policy? Call 1-800-STATE-FARM.",0,customer_service,professional_services
+"URGENT: Your medical records show eligibility for $150,000 settlement. Pay $199 processing fee: hxxp://medical-claim.net",1,customer_service,professional_services
+"Immediate Action Required: Send $299 to register for premium healthcare services. WhatsApp +1-SCAM-NUMBER for details.",1,customer_service,professional_services
+"Kaiser Permanente: Your prescription is ready for pickup at Main Street Pharmacy. Pay copay of $15 at pickup. Questions? Call your pharmacy at 555-0177 or visit kp.org/prescriptions.",0,customer_service,professional_services
+"POWER SHUTOFF NOTICE: Pay $499 immediately or service disconnects today. Click hxxp://utility-pay.net to restore.",1,customer_service,utility_services
+"URGENT: Your electricity will be disconnected in 2 hours. Call +1-SCAM-NUMBER now to prevent shutoff.",1,customer_service,utility_services
+"PG&E: Your bill of $127.86 is due Dec 22. Pay online at pge.com or by phone at 1-877-704-8470. Payment assistance programs available at pge.com/assistance. We never demand immediate payment or threaten immediate disconnection.",0,customer_service,utility_services
+"INTERNET SERVICE ALERT: Network breach detected! Verify account at hxxp://internet-secure.net or face disconnection.",1,customer_service,utility_services
+"Your WiFi has been compromised! Call Internet Security Team +1-SCAM-NUMBER immediately or service will be terminated.",1,customer_service,utility_services
+"Comcast: Scheduled maintenance in your area on Dec 21, 2-5 AM. No action needed. Track status at xfinity.com/status. Mobile hotspots available for Xfinity Internet customers during maintenance.",0,customer_service,utility_services
+"FINAL WARNING: Water service will be disconnected! Pay $399 through hxxp://water-utility-pay.net to prevent shutoff.",1,customer_service,utility_services
+"Your water meter shows unusual usage. Verify account at hxxp://water-verify.net or face penalties.",1,customer_service,utility_services
+"City Water Department: Your monthly bill of $78.92 is ready. Due date: Jan 5. Pay online at citywater.gov or at any authorized payment location. Questions? Call 555-0148 during business hours.",0,customer_service,utility_services

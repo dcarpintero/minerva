@@ -1,0 +1,28 @@
+message,is_scam,category,subcategory
+"ALERT: Unauthorized access detected on your account. Click hxxp://secur1ty-bank-verify.com to verify your identity immediately. Your account will be suspended in 2 hours.",1,financial,banking_and_payment
+"Dear customer, we detected unusual activity on your account. Please verify by texting back your online banking username and password.",1,financial,banking_and_payment
+"Revolut: We noticed a charge of $458.23 on your card ending in 7580 that appears unusual for your spending pattern. For your security, you might review this transaction in your Revolut app or at https://revolut.com. Never share your PIN or password with anyone.",0,financial,banking_and_payment
+"WARNING: $2,499 transaction pending at Amazon. If not you, click hxxp://chase-secure02.net/verify to cancel transaction immediately!",1,financial,banking_and_payment
+"Suspicious withdrawal attempt ($850) detected on your card ending 4355. Reply YES to confirm or NO to block.",1,financial,banking_and_payment
+"Revolut: You just made an online payment of EUR 64.47 with your card ending in 7587.",0,financial,banking_and_payment
+"URGENT: Your payment of $1,249 has been processed. To cancel this wire transfer, call our security team at +1-855-SCAM immediately.",1,financial,banking_and_payment
+"Your wire transfer of $5,000 to J. Smith was declined. To complete, verify at hxxp://wire-secure-verify.net with your account details.",1,financial,banking_and_payment
+"Hey Ana! Revolut is offering €100 for new customers right now. Just let me know if you're interested!",0,financial,banking_and_payment
+"CRITICAL: Invest in our new crypto fund! Guaranteed 500% returns in 30 days. Send Bitcoin to secure your spot: bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh",1,financial,investment
+"🚀 LAST CHANCE! Join our exclusive forex trading group. Turn $100 into $5000 weekly. Contact WhatsApp: +44-SCAM-NUMBER",1,financial,investment
+"Fidelity Investments: Your mutual fund purchase of $5,000 into FXAIX is confirmed. Settlement date: Dec 20. View your updated portfolio at fidelity.com/investments. For support with your account, visit fidelity.com/customer-service.",0,financial,investment
+"BINARY OPTIONS OPPORTUNITY: Start earning $1000/day with our automated trading system. Pay $299 to join: hxxp://binary-profits.xyz",1,financial,investment
+"Get rich with our AI trading bot! 100% success rate. Send $500 worth of ETH to activate: 0x742d35Cc6634C0532925a3b844Bc454e4438f44e",1,financial,investment
+"Hi Sarah! Just saw Vanguard is offering a great deal on their index funds right now - no minimum investment required!",0,financial,investment
+"🔥 NEW CRYPTO ALERT! BitMaxCoin launching tomorrow. Buy now at $0.01, guaranteed to hit $1! Register: hxxp://bitmaxcoin.net",1,financial,investment
+"Exclusive Forex Signal Group! Copy our trades for guaranteed profits. Join now: hxxp://forex-signals.xyz. Only $199/month.",1,financial,investment
+"Hi Thomas, just saw that Schwab dropped their commission fees to zero! Might be worth checking out if you're still paying fees at E*TRADE.",0,financial,investment
+"LOAN APPROVED! Get $50,000 instantly. Send $500 processing fee via Western Union to release funds. Reply YES to proceed.",1,financial,lending
+"Pre-approved for $25,000! No credit check needed. Send SSN and bank details to hxxp://quickloans-secure.xyz",1,financial,lending
+"Capital One: Your personal loan is confirmed. Check more personalized offers at capitalize.com.",0,financial,lending
+"DEBT CONSOLIDATION ALERT: Pay off all debts today! Send $199 via Bitcoin to start: hxxp://debt-freedom.xyz",1,financial,lending
+"Your credit card debts can be cleared for pennies on the dollar! Contact debthelp@scam.net for secret method.",1,financial,lending
+"Hey David! Just FYI - my credit union is offering really low rates on home loans right now. 4.5% for 30-year fixed. Worth checking out if you're still house hunting. Let me know if you want the details!",0,financial,lending
+"STUDENT LOAN FORGIVENESS PROGRAM! Pay $599 to eliminate all student debt. Must act now!",1,financial,lending
+"ATTENTION: Qualify for instant loan! Send photos of your credit cards to loans@fastcash.xyz",1,financial,lending
+"Bank of America has a special rate on personal loans this month. My colleague just got approved for 6.5% APR.",0,financial,lending

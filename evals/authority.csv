@@ -1,0 +1,28 @@
+message,is_scam,category,subcategory
+"URGENT: IRS FINAL NOTICE. You owe $4,875 in back taxes. Pay now at hxxp://irs-payment.xyz or face immediate arrest.",1,authority,government
+"Your Social Security number has been suspended due to suspicious activity. Call +1-SCAM-NUMBER immediately to prevent arrest.",1,authority,government
+"IRS: Your tax return has been processed. Track your refund at irs.gov/refunds using your filing info. Questions? Call 800-829-1040. The IRS never requests sensitive information by email.",0,authority,government
+"IMMIGRATION ALERT: Your visa status is irregular. Pay $999 penalty fee at hxxp://uscis-verify.net to avoid deportation.",1,authority,government
+"URGENT: Your Green Card application needs verification. Send copies of passport and SSN to visa@immigration-services.xyz",1,authority,government
+"USCIS: Your appointment is confirmed for Dec 21, 10AM at 26 Federal Plaza, NYC. Bring confirmation notice #USC789012 and required documents listed on uscis.gov/appointments.",0,authority,government
+"POLICE NOTICE: Warrant issued for your arrest. Pay fine of $750 via Bitcoin to cancel warrant. Contact officer@police-dept.net",1,authority,government
+"FINAL WARNING: Court appearance mandatory! Pay $500 processing fee at hxxp://court-services.xyz to dismiss charges.",1,authority,government
+"County Court Notice: You are summoned for jury duty starting Jan 15, 2024. Register at courts.state.gov/jury or call 555-0123. No fees required for jury service.",0,authority,government
+"IT SECURITY ALERT: Your company email will be suspended. Verify at hxxp://corporate-email-verify.net within 30 minutes.",1,authority,corporate
+"URGENT: CEO requests immediate wire transfer of $9,850. Reply with confirmation. Confidential matter - do not discuss.",1,authority,corporate
+"Microsoft IT: Your password expires today. Update it at microsoft.com/account or through Microsoft Authenticator app. We never ask for passwords via email.",0,authority,corporate
+"HR NOTICE: Employee benefits suspended. Update details at hxxp://hr-benefits.xyz to restore coverage immediately.",1,authority,corporate
+"Payroll Processing Error: Send bank details to payroll@company-verify.net for immediate correction of salary.",1,authority,corporate
+"Workday: Your W-2 form for 2023 is now available. Access securely at workday.com/benefits. For technical support, contact your HR department at extension 5545.",0,authority,corporate
+"VENDOR PAYMENT ALERT: New banking details for invoice processing. Update at hxxp://vendor-verify.net immediately.",1,authority,corporate
+"Urgent: CFO needs gift cards for client meeting. Buy $1,000 in Apple cards and send codes to cfo@company-gifts.xyz",1,authority,corporate
+"Adobe Security: Sign in attempt from new device detected. Review activity at adobe.com/security. Don't recognize this? Change your password at adobe.com/account.",0,authority,corporate
+"BANK SECURITY ALERT: Account frozen due to suspicious activity. Call +1-SCAM-NUMBER immediately to verify identity.",1,authority,financial_institutions
+"Your credit card has been charged $899. If unauthorized, click hxxp://bank-secure-verify.net to dispute.",1,authority,financial_institutions
+"Chase Fraud Prevention: Did you attempt a purchase of $523.87 at Amazon? Reply YES or NO. View card activity at chase.com. Never share your PIN or password.",0,authority,financial_institutions
+"IMMEDIATE ACTION: Credit score dropped 100 points. Pay $299 at hxxp://credit-restore.xyz to protect your score.",1,authority,financial_institutions
+"Insurance Claim Warning: Policy canceled unless verified. Send policy details to claims@insurance-verify.net now.",1,authority,financial_institutions
+"Geico: Your auto insurance payment of $143.50 is scheduled for Dec 20. Review or update payment info at geico.com/payment. Questions? Call 1-800-207-7847.",0,authority,financial_institutions
+"INVESTMENT ALERT: Portfolio requires immediate verification. Login at hxxp://investment-secure.net to prevent freeze.",1,authority,financial_institutions
+"Account Processing Error: Send bank statement to verify@payment-processor.xyz to avoid service interruption.",1,authority,financial_institutions
+"Fidelity: Unusual login attempt detected from new device. Verify it's you at fidelity.com/security. To report unauthorized access, call 800-544-6666.",0,authority,financial_institutions

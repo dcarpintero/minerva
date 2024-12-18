@@ -31,7 +31,7 @@ class MinervaEvaluator:
         start_time = time.perf_counter()
         try:
             stream = await self.agents.analyze_msg(msg)
-            
+
             streams = []
             async for s in stream:
                 streams.append(s)
@@ -42,8 +42,8 @@ class MinervaEvaluator:
                 prediction = "unknown,unknown,0.0"
             
             await self.agents.reset()
-            latency = time.perf_counter() - start_time
 
+            latency = time.perf_counter() - start_time
             return prediction, latency
             
         except Exception as e:
@@ -59,9 +59,10 @@ class MinervaEvaluator:
         # run evals predictions
         latencies = []
         for i, row in df_evals.iterrows():
-            self.logger.info(f"{row['category']}.{row['subcategory']}#{i}") 
+            self.logger.info(f"{row['category']}.{row['subcategory']}#{i} - {row['message'][:50]}...") 
             result, latency = await self.predict(row['message'])
             latencies.append(latency)
+
 
         # reverse preds order, and reset index
         df_preds = self.db_connector.get_top_k(i+1)
@@ -100,7 +101,7 @@ async def main():
     evaluator = MinervaEvaluator()
 
     try:
-        df_evals = pd.read_csv("./evals/commerce.csv")
+        df_evals = pd.read_csv("./evals/all.csv")
         if not all(col in df_evals.columns for col in ['message', 'category', 'subcategory', 'is_scam']):
             raise ValueError("Required columns missing in evaluation dataset")
     

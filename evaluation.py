@@ -63,7 +63,6 @@ class MinervaEvaluator:
             result, latency = await self.predict(row['message'])
             latencies.append(latency)
 
-
         # reverse preds order, and reset index
         df_preds = self.db_connector.get_top_k(i+1)
         df_preds = df_preds[::-1].reset_index(drop=True)
@@ -101,7 +100,7 @@ async def main():
     evaluator = MinervaEvaluator()
 
     try:
-        df_evals = pd.read_csv("./evals/all.csv")
+        df_evals = pd.read_csv("./evals/experiments/all.csv")
         if not all(col in df_evals.columns for col in ['message', 'category', 'subcategory', 'is_scam']):
             raise ValueError("Required columns missing in evaluation dataset")
     

@@ -1,0 +1,34 @@
+---------- Commerce ------------
+Evaluation Results (gpt-4o-mini):
+Accuracy: 93.33%
+Correct Predictions: 28/30
+Average Confidence: 4.6
+Average Latency: 20.4 seconds
+
+---------- Rewards and Opportunities -----------
+Evaluation Results (gpt-4o-mini):
+Accuracy: 81.48%
+Correct Predictions: 22/27
+Average Confidence: 4.5
+Average Latency: 21.5 seconds
+
+---------- Service -----------
+Evaluation Results (gpt-4o-mini):
+Accuracy: 100.00%
+Correct Predictions: 27/27
+Average Confidence: 4.7
+Average Latency: 20.4 seconds
+
+---------- Authority -----------
+Evaluation Results (gpt-4o-mini):
+Accuracy: 81.48%
+Correct Predictions: 22/27
+Average Confidence: 4.7
+Average Latency: 20.8 seconds
+
+---------- Financial -----------
+Evaluation Results (gpt-4o-mini):
+Accuracy: 85.19%
+Correct Predictions: 23/27
+Average Confidence: 4.6
+Average Latency: 20.4 seconds

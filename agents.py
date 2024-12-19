@@ -42,7 +42,7 @@ class MinervaTeam:
     def initialize_model(self) -> OpenAIChatCompletionClient:
         """Initialize OpenAI model"""
         return OpenAIChatCompletionClient(
-            model="gpt-4o",
+            model="gpt-4o-mini",
             api_key=os.getenv("OPENAI_API_KEY")
         )
 

@@ -3,7 +3,7 @@ from typing import Tuple
 
 import pandas as pd
 
-from txtagents import MinervaTeam
+from agents import MinervaTeam
 from typing import List, Dict
 import logging
 
@@ -100,7 +100,7 @@ async def main():
     evaluator = MinervaEvaluator()
 
     try:
-        df_evals = pd.read_csv("./evals/experiments/all.csv")
+        df_evals = pd.read_csv("./evals/experiments/scam.all.categories.csv")
         if not all(col in df_evals.columns for col in ['message', 'category', 'subcategory', 'is_scam']):
             raise ValueError("Required columns missing in evaluation dataset")
     

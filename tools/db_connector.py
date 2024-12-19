@@ -8,7 +8,7 @@ from datetime import datetime
 class DatabaseConnector:
     """Manages database operations for storing analysis results."""
 
-    def __init__(self, db_path: str = "sqlite3/results.db"):
+    def __init__(self, db_path: str = "sqlite3/results.financial.db"):
         """Initialize database connection and create table if it doesn't exist.
         """
         self.db_path = db_path

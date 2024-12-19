@@ -13,13 +13,13 @@ pinned: false
 
 ## MINERVA: A Multi-Agent LLM System for Digital Scam Protection
 
-Digital scams inflict devastating impacts in our society. According to the FBI IC3, $37.4 billion was lost in the United States alone over the past five years due to Internet scams [1]. Beyond these direct financial losses, the hidden costs of processing nearly 4 million associated complaints has overwhelmed institutional and enterprise resources [1]. Victims also face lasting psychological disruptions and diminished trust in emerging technologies.
+Digital scams inflict devastating impacts in our society. According to the FBI IC3, $37.4 billion was lost in the United States alone over the past five years due to Internet scams [1]. Beyond these direct financial losses, the hidden costs of processing nearly 4 million associated complaints has overwhelmed institutional and enterprise resources [1]. Victims also face psychological disruptions and diminished trust in emerging technologies.
 
 To address this challenge, we present MINERVA, a multi-agent system powered by a Large Language Model (gpt-4o-mini) for protecting users from digital scams. Our system implements a cooperative team of seven specialized agents built on the AutoGen framework (v0.4.0) [2]. Each agent combines advanced model capabilities with specific tools to handle distinct aspects of scam detection: optical character recognition, link verification, content analysis, decision making, summarization, linguistic translation, and archiving. The workflow begins when a user submits a multimodal message and concludes either when agents complete a round-robin conversation cycle or when an agent triggers a termination signal.
 
-To evaluate our system's performance, we developed a hierarchical scam taxonomy, which served as the foundation for creating a diverse synthetic dataset using Claude 3.5 Sonnet. Initial evaluations comparing our multi-agent system against a prompt baseline show that this agentic approach achieves higher accuracy (88.3% vs. 69.5%) and provides further user functionality. This category-level evaluation approach further revealed that the model tends to adopt a more conservative stance in certain scam types.
+To evaluate our system's performance, we developed a hierarchical scam taxonomy, which served as the foundation for creating a diverse synthetic dataset. Initial evaluations comparing our multi-agent system against a prompt baseline show that our agentic approach achieves higher accuracy (88.3% vs. 69.5%) while providing more comprehensive functionality. Category-level analysis further reveals that the model tends to adopt a more defensive assessment in certain scam topics.
 
-Beyond more accurate scam protection, this project aims to enhance digital literacy by providing users with well-reasoned explanations of detected scams, fostering trust in AI-powered safety tools. Additionally, the archiving task of this agentic workflow enables to create an open, anonymized dataset. This scam dataset would serve two purposes: (i) enabling fine-tuning of models with current scam patterns, and (ii) providing insights for law enforcement and cybersecurity professionals to understand emerging threats and attack vectors.
+Beyond improving scam detection accuracy and reducing administrative overhead, MINERVA aims to deliver broader societal benefits. By providing users with detailed, well-reasoned explanations of detected scams, our system enhances digital literacy and builds trust in AI-powered safety tools. Additionally, the archiving task of this agentic workflow enables to create an open, anonymized dataset of categorized scam patterns. This dataset would serve, at least, two purposes: (i) enabling fine-tuning of models with current scam patterns, and (ii) providing insights for law enforcement and cybersecurity professionals to understand emerging threats and attack vectors.
 
 *[This work was developed for RDI Berkeley, LLM-Agents Course, CS294/194-196. By Diego Carpintero]*
 
@@ -167,9 +167,9 @@ Our initial evaluation compared MINERVA against a prompt baseline (temperature=0
   <img src="./evals/results/minerva.scamprediction.accuracy.confidence.png">
 </p>
 
-### Societal Benefits
+### Societal Impact
 
-Beyond more accurate scam protection, this project aims to enhance digital literacy by providing users with well-reasoned explanations of detected scams, fostering trust in AI-powered safety tools. Additionally, the archiving task of this agentic workflow enables to create an open, anonymized dataset. This scam dataset would serve, at least, two purposes: (i) enabling fine-tuning of models with current scam patterns, and (ii) providing insights for law enforcement and cybersecurity professionals to understand emerging threats and attack vectors.
+Beyond improving scam detection accuracy and reducing administrative overhead, this project aims to deliver broader societal benefits. By providing users with detailed, well-reasoned explanations of detected scams, MINERVA enhances digital literacy and builds trust in AI-powered safety tools. Additionally, the archiving task of this agentic workflow enables to create an open, anonymized dataset of categorized scam patterns. This dataset would serve, at least, two purposes: (i) enabling fine-tuning of models with current scam patterns, and (ii) providing insights for law enforcement and cybersecurity professionals to understand emerging threats and attack vectors.
 
 ### References
 

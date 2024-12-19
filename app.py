@@ -19,7 +19,8 @@ description = """
                 - *Content Analyst* </br>
                 - *Decision Maker* </br>
                 - *Summary Specialist* </br>
-                - *Language Translation Specialist* </br></br>
+                - *Language Translation Specialist* </br>
+                - *Data Storage Agent* </br></br>
 
               🧑‍💻️ https://github.com/dcarpintero/minerva </br>
               🎓 Submission for RBI Berkeley, CS294/194-196, LLM Agents (Diego Carpintero)</br></br>
